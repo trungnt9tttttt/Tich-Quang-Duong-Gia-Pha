@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ebook Reader</title>
+
+https://unpkg.com/epubjs/dist/epub.min.jsscript>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+}
+
+#viewer{
+    height:100vh;
+    width:100%;
+}
+</style>
+
+</head>
+<body>
+
+<div id="viewer"></div>
+
+<script>
+
+var book = ePub("TICH QUANG DUONG GIA PHA.epub");
+
+var rendition = book.renderTo("viewer", {
+    width:"100%",
+    height:"100%"
+});
+  
+rendition.display();
+
+</script>
+
+</body>
+</html>
